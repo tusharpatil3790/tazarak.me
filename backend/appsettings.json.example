@@ -1,0 +1,23 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "MongoDB": "mongodb://localhost:27017"
+  },
+  "MongoDb": {
+    "DatabaseName": "tazarak-me"
+  },
+  "EmailSettings": {
+    "SmtpHost": "smtp.gmail.com",
+    "SmtpPort": "587",
+    "SmtpUsername": "your-email@gmail.com",
+    "SmtpPassword": "your-app-password",
+    "FromEmail": "your-email@gmail.com",
+    "FromName": "Portfolio Contact",
+    "AdminEmail": "your-email@gmail.com"
+  }
+}
