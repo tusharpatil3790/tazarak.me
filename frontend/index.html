@@ -247,12 +247,12 @@
     </footer>
     
     <script>
-        const API_URL = 'http://localhost:5000/api';
+        const API_URL = 'https://localhost:5001/api';
         
         // Check API health
         async function checkApiHealth() {
             try {
-                const response = await fetch(`${API_URL}/health`);
+                const response = await fetch(`${API_URL}/experiences`);
                 if (response.ok) {
                     document.getElementById('apiStatus').textContent = '✓ API Connected';
                     document.getElementById('apiStatus').classList.remove('offline');
