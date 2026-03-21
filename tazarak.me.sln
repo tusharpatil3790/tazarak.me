@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tazarak.me", "tazarak.me", "{CC5EF82A-82AD-2DF2-2FA7-FDC1667E7D50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{FC0685AD-7759-A458-E6C9-E3086F0E7C99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Host", "1.Host", "{063169DB-70BF-9489-F9C3-6205D88AD795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI", "tazarak.me\backend\1.Host\PortfolioAPI.csproj", "{F612BBD4-ACE5-4159-882E-A77ABCD919A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E75B7B97-0821-4C23-D237-B0011398F3A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{51D64941-C021-0073-9786-05F40F6E9F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI.Tests", "tazarak.me\tests\backend\PortfolioAPI.Tests\PortfolioAPI.Tests.csproj", "{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|x64.Build.0 = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Debug|x86.Build.0 = Debug|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|x64.ActiveCfg = Release|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|x64.Build.0 = Release|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3}.Release|x86.Build.0 = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|x64.Build.0 = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|x64.ActiveCfg = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|x64.Build.0 = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC0685AD-7759-A458-E6C9-E3086F0E7C99} = {CC5EF82A-82AD-2DF2-2FA7-FDC1667E7D50}
+		{063169DB-70BF-9489-F9C3-6205D88AD795} = {FC0685AD-7759-A458-E6C9-E3086F0E7C99}
+		{F612BBD4-ACE5-4159-882E-A77ABCD919A3} = {063169DB-70BF-9489-F9C3-6205D88AD795}
+		{E75B7B97-0821-4C23-D237-B0011398F3A6} = {CC5EF82A-82AD-2DF2-2FA7-FDC1667E7D50}
+		{51D64941-C021-0073-9786-05F40F6E9F08} = {E75B7B97-0821-4C23-D237-B0011398F3A6}
+		{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08} = {51D64941-C021-0073-9786-05F40F6E9F08}
+	EndGlobalSection
+EndGlobal
