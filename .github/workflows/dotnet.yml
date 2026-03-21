@@ -1,28 +1,77 @@
-# This workflow will build a .NET project
+# This workflow will build a .NET project and validate the frontend
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main", "master", "develop" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "main", "master", "develop" ]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+        dotnet-version: 10.0.x
+
+    - name: Restore backend dependencies
+      run: dotnet restore ./tazarak.me.sln
+      working-directory: ./
+
+    - name: Build backend
+      run: dotnet build ./tazarak.me.sln --configuration Release --no-restore
+      working-directory: ./
+
+    - name: Run backend tests
+      run: dotnet test ./tazarak.me.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      working-directory: ./
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: ./tazarak.me/frontend/package-lock.json
+
+    - name: Install frontend dependencies
+      run: |
+        if [ -f "./tazarak.me/frontend/package.json" ]; then
+          npm ci
+        else
+          echo "No package.json found, skipping npm install"
+        fi
+      working-directory: ./tazarak.me/frontend
+
+    - name: Validate frontend files
+      run: |
+        # Check if HTML, CSS, and JS files are valid
+        if [ -f "index.html" ] && [ -f "styles.css" ] && [ -f "script.js" ]; then
+          echo "✅ Frontend files are present"
+        else
+          echo "❌ Missing frontend files"
+          exit 1
+        fi
+      working-directory: ./tazarak.me/frontend
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: ./tazarak.me/tests/**/TestResults/
+
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v4
+      if: success()
+      with:
+        file: ./tazarak.me/tests/**/coverage.cobertura.xml
+        flags: backend
+        name: codecov-backend
