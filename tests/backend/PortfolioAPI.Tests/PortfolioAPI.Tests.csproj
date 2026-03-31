@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\backend\1.Host\PortfolioAPI.csproj" />
+    <ProjectReference Include="..\..\..\backend\1.Host\PortfolioAPI.csproj" />
   </ItemGroup>
 
 </Project>
