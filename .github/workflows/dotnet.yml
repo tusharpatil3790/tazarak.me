@@ -23,15 +23,15 @@ jobs:
         dotnet-version: 10.0.x
 
     - name: Restore backend dependencies
-      run: dotnet restore ./tazarak.me.sln
+      run: dotnet restore  
       working-directory: ./
 
     - name: Build backend
-      run: dotnet build ./tazarak.me.sln --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
       working-directory: ./
 
     - name: Run backend tests
-      run: dotnet test ./tazarak.me.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      run: dotnet test --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
       working-directory: ./
 
     - name: Setup Node.js
