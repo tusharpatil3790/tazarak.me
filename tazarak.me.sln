@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{FC06
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Host", "1.Host", "{063169DB-70BF-9489-F9C3-6205D88AD795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI", "tazarak.me/backend/1.Host/PortfolioAPI.csproj", "{F612BBD4-ACE5-4159-882E-A77ABCD919A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI", "backend/1.Host/PortfolioAPI.csproj", "{F612BBD4-ACE5-4159-882E-A77ABCD919A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E75B7B97-0821-4C23-D237-B0011398F3A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{51D64941-C021-0073-9786-05F40F6E9F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI.Tests", "tazarak.me/tests/backend/PortfolioAPI.Tests/PortfolioAPI.Tests.csproj", "{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAPI.Tests", "tests/backend/PortfolioAPI.Tests/PortfolioAPI.Tests.csproj", "{B3A0242C-FF82-42D5-A7E4-6FE6115F5D08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
