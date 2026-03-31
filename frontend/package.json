@@ -1,0 +1,20 @@
+{
+  "name": "tazarak-me-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Tushar Patil's portfolio website",
+  "main": "serve-frontend.js",
+  "scripts": {
+    "start": "node serve-frontend.js",
+    "dev": "node serve-frontend.js"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "static-site"
+  ],
+  "author": "Tushar Patil",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
